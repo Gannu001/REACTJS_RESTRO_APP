@@ -41,8 +41,9 @@ const ShopByCategory = () => {
   }, [activeCategory]);
 
   return (
-    <div className="shop-by-category">
-      <h2 className="category-title">Shop by Category</h2>
+    <div className="shop-by-category" style={{marginTop:"7.5em"}}>
+      <h4 className="category-title" style={{marginTop:"1.5em"}}>Shop by Category</h4>
+      <h2 className="category-title">Top Category Of Orrganic Food</h2>
       <div className="category-buttons">
         {categories.map((category) => (
           <button
