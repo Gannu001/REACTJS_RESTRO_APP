@@ -60,6 +60,40 @@ nav {
   transition: 0.2s;
 }
 
+.user-stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5em;
+  gap: 3em;
+  /* flex-direction: column; Adjust to column layout */
+}
+.shop-now-button {
+  background-color: darkgreen;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.shop-now-container {
+  margin-bottom: 20px; /* Adjust margin for spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-stat {
+  font-size: 24px;
+}
+
+.user-text {
+  font-size: 16px;
+  color: #333;
+}
+
 .primary-button:hover {
   background-color: rgb(3, 75, 6);
 }
@@ -117,7 +151,7 @@ nav {
 
 .secondary-button {
   padding: 1rem 2.5rem;
-  background-color: #fe9e0d;
+  background-color: #345333;
   outline: none;
   border: none;
   border-radius: 5rem;

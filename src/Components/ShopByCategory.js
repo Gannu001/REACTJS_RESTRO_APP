@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ShopByCategory.css";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const ShopByCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -13,7 +14,7 @@ const ShopByCategory = () => {
         const response = await axios.get(
           "https://www.themealdb.com/api/json/v1/1/categories.php"
         );
-        setCategories(response.data.categories);
+        setCategories(response.data.categories.slice(0,8));
         setActiveCategory(response.data.categories[0].strCategory);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -41,7 +42,7 @@ const ShopByCategory = () => {
   }, [activeCategory]);
 
   return (
-    <div className="shop-by-category" style={{marginTop:"7.5em"}}>
+    <div className="shop-by-category" style={{marginTop:"1.5em"}}>
       <h4 className="category-title" style={{marginTop:"1.5em"}}>Shop by Category</h4>
       <h2 className="category-title">Top Category Of Orrganic Food</h2>
       <div className="category-buttons">
@@ -65,7 +66,7 @@ const ShopByCategory = () => {
             {/* <p>lowsdbajshbdashbdjshbdjhsb</p> */}
             <p>loremipsumdolorsitametloremipsum</p>
             </div>
-            <div className="pricing"><span>$1</span><span>Shop now</span></div>
+            <div className="pricing"><span>$8.45</span><span>Shop now <FiArrowRight/> </span></div>
           </div>
         ))}
       </div>

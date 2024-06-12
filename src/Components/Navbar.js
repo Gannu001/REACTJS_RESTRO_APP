@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Logo from "../Assets/GO FOOD.png";
-import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
@@ -11,6 +10,7 @@ import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { HiOutlineSearch, HiOutlineHeart, HiOutlineUser, HiOutlineShoppingBag } from "react-icons/hi";
 // import { HiOutlineBars3 } from "react-icons/hi2";
 import "./Navbar.css";
+import { FiArrowRight } from "react-icons/fi";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
@@ -23,29 +23,22 @@ const Navbar = () => {
       icon: <InfoIcon />,
     },
     {
-      text: "Testimonials",
-      icon: <CommentRoundedIcon />,
-    },
-    {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
     },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />,
-    },
+    
   ];
   return (
     <nav>
       <div className="nav-logo-container">
         <img src={Logo} alt="" />
       </div>
-      <div className="navbar-links-container" style={{marginLeft:"9em"}}>
+      <div className="navbar-links-container" style={{marginLeft:"10.5em"}}>
         <a href="">Home</a>
         <a href="">Groceries</a>
         <a href="">Pages</a>
-        <a href="">Connect with us</a>
-        <div className="icon-container">
+        <a href="">Connect with us <FiArrowRight/></a>
+        <div className="icon-container" style={{marginLeft:"10em"}}>
           <div className="icon-wrapper">
             <HiOutlineHeart className="navbar-icon heart" />
           </div>
